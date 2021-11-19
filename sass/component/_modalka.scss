@@ -32,11 +32,12 @@
     background-color: var(--white-color);
     cursor: pointer;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     &:hover,
+     &:focus {
+     fill: var(--accent-color);
+   }
   }
-  .backdrop-button:hover,
-  .backdrop-button:focus {
-    fill: var(--accent-color);
-  }
+  
   .is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -78,13 +79,14 @@
     padding-right: 40px;
     outline: none;
     cursor: pointer;
+      &:focus {
+      border-color: var(--accent-color)
+    };
+      &:focus + .backdrop-icon-svg {
+      fill: var(--accent-color);
+    }
   }
-  .backdrop-input:focus {
-    border-color: var(--accent-color);
-  }
-  .backdrop-input:focus + .backdrop-icon-svg {
-    fill: var(--accent-color);
-  }
+  
   .backdrop-icon-svg {
     position: absolute;
     top: 50%;
@@ -105,10 +107,11 @@
     line-height: 1.14;
     letter-spacing: 0.01em;
     outline: none;
+    &:focus {
+      border-color: var(--accent-color);
+    }
   }
-  .backdrop-textarea:focus {
-    border-color: var(--accent-color);
-  }
+
   .checkbox-lable-text {
     display: flex;
     align-items: center;
@@ -119,6 +122,15 @@
     letter-spacing: 0.03em;
     color: #757575;
     margin-top: 20px;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      border: 1px solid #757575;
+    }
   }
   .checkbox-link {
     font-weight: 400;
@@ -128,21 +140,14 @@
     color: var(--accent-color);
     margin-left: 5px;
   }
-  .checkbox-lable-text span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    border: 1px solid #757575;
-  }
+
   .checkbox-icon-svg {
     fill: #ffffff;
   }
-  .checkbox-input:checked + .checkbox-lable-text span {
+  .checkbox-input{
+    &:checked + .checkbox-lable-text span {
     background-color: var(--accent-color);
-    border: 0;
+    border: none;}
   }
   .checkbox-span {
     margin-right: 7px;

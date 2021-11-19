@@ -52,9 +52,9 @@
   .footer-right-item {
     width: 44px;
     height: 44px;
-  }
-  .footer-right-item:not(:last-child) {
-    margin-right: 10px;
+     &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
   .footer-right-link {
     width: 100%;
@@ -65,16 +65,17 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     &:hover,
+     :focus {
+      background-color: var(--accent-color);
+    }
   }
   .footer-right-icoons {
     width: 20px;
     height: 20px;
     fill: var(--white-color);
   }
-  .footer-right-link:hover,
-  .footer-right-link:focus {
-    background-color: var(--accent-color);
-  }
+
   .footer-centr-right {
     margin-left: 93px;
   }
@@ -94,12 +95,13 @@
     color: rgba(255, 255, 255, 0.6);
     outline: none;
     cursor: pointer;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     &:focus,
+     :hover {
+      border-color: var(--accent-color);
+    }
   }
-  .footer-input-email:focus,
-  .footer-input-email:hover {
-    border-color: var(--accent-color);
-  }
+  
   .footer-button-centr-right {
     position: relative;
     margin-left: 12px;

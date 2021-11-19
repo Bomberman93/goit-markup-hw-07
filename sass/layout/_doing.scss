@@ -5,9 +5,9 @@
   .item-service {
     position: relative;
     width: 370px;
-  }
-  .item-service:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
   .section-title {
     color: var(--title-text-color);
